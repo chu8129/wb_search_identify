@@ -8,3 +8,10 @@
 
 好了，目前只完成了一小部分
 ```
+
+```
+mac下就直接brew吧，省事
+上个精度不高的工具，起码不用自己标注
+brew install tesseract
+pip install pytesseract 
+```
