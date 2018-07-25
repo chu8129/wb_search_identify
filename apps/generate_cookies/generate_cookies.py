@@ -92,7 +92,7 @@ class generate_cookies(object):
             res = requests.get(url = url, headers={}, cookies={})
             #logging.debug("response headers:%s" % res.headers)
             cookies =  res.headers.get("Set-Cookie", None)
-            if cookies.startswith("SUB="):
+            if cookies and cookies.startswith("SUB="):
                 return cookies
 
     def test_get(self):
