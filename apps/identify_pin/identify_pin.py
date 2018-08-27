@@ -26,12 +26,21 @@ def identify_pin(headers, identify_code):
     headers["Accept-Encoding"] = "gzip, deflate"
 
     new_headers  = {}
-    new_headers["Content-Type"] = headers["Content-Type"]
-    new_headers["Referer"] = headers["Referer"]  
+    new_headers["Content-Length"] = "39"
     new_headers["Accept"] = headers["Accept"]
+    new_headers["Accept-Encoding"] = "gzip, deflate"
+    new_headers["Accept-Language"] = "en,zh-CN;q=0.9,zh;q=0.8,ja;q=0.7,zh-TW;q=0.6,en-US;q=0.5"
+    new_headers["Cache-Control"] = "no-cache"
+    new_headers["Pragma"] = "no-cache"
+    new_headers["Connection"] = "keep-alive"
+    new_headers["Content-Type"] = headers["Content-Type"]
+    new_headers["Referer"] = "http://s.weibo.com/weibo/%25E6%25B5%258B%25E8%25AF%2595&Refer=STopic_box"
+    #headers["Referer"]  
     new_headers["User-Agent"] = headers["User-Agent"]
     new_headers["Origin"] = headers["Origin"]
     new_headers["X-Requested-With"] = headers["X-Requested-With"]
+    new_headers["Cookie"] = headers["Cookie"]
+    new_headers["Host"] = headers["Host"]
     headers = new_headers 
 
     data = {
