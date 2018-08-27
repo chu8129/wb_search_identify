@@ -8,4 +8,6 @@ sys.path.append("./")
 from apps.mark_image.mark_image import mark_image
 
 if __name__ == "__main__":
-    print mark_image()
+    file_path, code, status =  mark_image()
+    with open("result.txt", "wa") as fw:
+        fw.write(",".join([file_path, code, str(status)]) + "\n")
