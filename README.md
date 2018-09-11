@@ -17,3 +17,6 @@ mac下就直接brew吧，省事
 brew install tesseract
 pip install pytesseract 
 ```
+```
+改为迁移学习，tesseract的识别率真的太低，没有进行重新标注的条件下
+```
